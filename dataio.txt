@@ -1,0 +1,46 @@
+# read a text file
+
+with open("filename.txt", "rt") as f:
+  data_lines = f.readlines()
+
+# save a python object
+
+import pickle as pkl
+with open("filename.pkl", "wb") as f:
+  pkl.dump(object, f)
+
+# load a python object
+
+import pickle as pkl
+with open("filename.pkl", "rb") as f:
+  object = pkl.load(f)
+
+
+# load an image as a numpy array
+
+import numpy as np
+from PIL import Image
+img = np.asarray(Image.open("image_filename.jpg"))
+
+# save a matplotlib image
+
+import matplotlib.pyplot as plt
+# Create image in Figure named fig
+fig.savefig("filename.png", dpi=300)
+
+# load a csv as a python list of dictionaries
+
+import csv
+with open("data.csv") as csv_file:
+    list_of_dicts = list(csv.DictReader(csv_file))
+    
+# Load a csv as a Pandas DataFrame
+
+import pandas as pd
+df = pd.read_csv("data.csv")
+
+# Convert a JSON string to Python dictionary and back
+
+import json
+json_dict = json.loads(json_formatted_string)
+json_formatted_string = json.dumps(json_dict)
